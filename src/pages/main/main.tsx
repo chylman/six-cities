@@ -90,7 +90,7 @@ function Main({offersCount = 0} : MainProps): JSX.Element {
                 </ul>
               </form>
               <div className="cities__places-list places__list tabs__content">
-                {Array.from({length: offersCount}, () => <Card />)}
+                {Array.from({length: offersCount}, (item, index) => <Card key={index} />)}
               </div>
             </section>
             <div className="cities__right-section">
