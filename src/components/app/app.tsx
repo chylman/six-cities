@@ -1,9 +1,11 @@
 import Main from '../../pages/main/main';
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import Login from '../../pages/login/login';
+import Page404 from '../../pages/page404/page404';
+import {AuthorizationStatus} from '../../const';
+import PrivateRoute from '../private-route/private-route';
 import Favorites from '../../pages/favorites/favorites';
 import Room from '../../pages/room/room';
-import Page404 from '../../pages/page404/page404';
 
 type AppProps = {
   offersCount: number;
@@ -13,9 +15,16 @@ function App({offersCount}: AppProps) : JSX.Element {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Main offersCount={offersCount}/>}></Route>
+        <Route index path='/' element={<Main offersCount={offersCount}/>}></Route>
         <Route path='/login' element={<Login/>}></Route>
-        <Route path='/favourites' element={<Favorites/>}></Route>
+        <Route path='/favourites' element={
+          <PrivateRoute
+            authorizationStatus={AuthorizationStatus.NoAuth}
+          >
+            <Favorites/>
+          </PrivateRoute>
+        }
+        />
         <Route path='/offer/:id' element={<Room/>}></Route>
         <Route path='*' element={<Page404/>}></Route>
       </Routes>
