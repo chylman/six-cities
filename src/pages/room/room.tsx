@@ -91,7 +91,7 @@ function Room() : JSX.Element {
                 <span className="property__price-text">&nbsp;night</span>
               </div>
               <div className="property__inside">
-                <h2 className="property__inside-title">What's inside</h2>
+                <h2 className="property__inside-title">What&apos;s inside</h2>
                 <ul className="property__inside-list">
                   <li className="property__inside-item">
                     Wi-Fi
@@ -133,10 +133,10 @@ function Room() : JSX.Element {
                   </div>
                   <span className="property__user-name">
                       Angelina
-                    </span>
+                  </span>
                   <span className="property__user-status">
                       Pro
-                    </span>
+                  </span>
                 </div>
                 <div className="property__description">
                   <p className="property__text">
@@ -157,7 +157,7 @@ function Room() : JSX.Element {
                       </div>
                       <span className="reviews__user-name">
                           Max
-                        </span>
+                      </span>
                     </div>
                     <div className="reviews__info">
                       <div className="reviews__rating rating">
@@ -207,7 +207,7 @@ function Room() : JSX.Element {
                       </svg>
                     </label>
                   </div>
-                  <textarea className="reviews__textarea form__textarea" id="review" name="review" placeholder="Tell how was your stay, what you like and what can be improved" defaultValue={""} />
+                  <textarea className="reviews__textarea form__textarea" id="review" name="review" placeholder="Tell how was your stay, what you like and what can be improved" defaultValue={''} />
                   <div className="reviews__button-wrapper">
                     <p className="reviews__help">
                       To submit review please make sure to set <span className="reviews__star">rating</span> and describe your stay with at least <b className="reviews__text-amount">50 characters</b>.
