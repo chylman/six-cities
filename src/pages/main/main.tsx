@@ -1,4 +1,6 @@
-import Card from '../../components/card/card';
+// import Card from '../../components/card/card';
+import CardList from '../../components/card-list/card-list';
+import offers from '../../mocks/offers';
   type MainProps = {
     offersCount: number;
   }
@@ -89,9 +91,7 @@ function Main({offersCount = 0} : MainProps): JSX.Element {
                   <li className="places__option" tabIndex={0}>Price: high to lowTop rated first</li>
                 </ul>
               </form>
-              <div className="cities__places-list places__list tabs__content">
-                {Array.from({length: offersCount}, (item, index) => <Card key={index} />)}
-              </div>
+              <CardList offers={offers}></CardList>
             </section>
             <div className="cities__right-section">
               <section className="cities__map map"></section>

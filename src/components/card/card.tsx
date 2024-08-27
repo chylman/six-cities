@@ -1,4 +1,19 @@
-function Card() : JSX.Element {
+import type {Offer} from '../../types/offer';
+// import {AppRoute} from '../../const';
+
+// const STARS__COUNT = 5;
+// const MAX_PERCENT_STARS_WIDTH = 100;
+
+function Card({
+  id,
+  price,
+  rating,
+  title,
+  isPremium,
+  isFavorite,
+  previewImage,
+  type
+}: Offer): JSX.Element {
   return (
     <article className="cities__place-card place-card">
       <div className="place-card__mark">
@@ -6,7 +21,9 @@ function Card() : JSX.Element {
       </div>
       <div className="cities__image-wrapper place-card__image-wrapper">
         <a href="#">
-          <img className="place-card__image" src="public/img/apartment-03.jpg" width="260" height="200" alt="Place image"/>
+          <img className="place-card__image" src="public/img/apartment-03.jpg" width="260" height="200"
+            alt="Place image"
+          />
         </a>
       </div>
       <div className="place-card__info">
