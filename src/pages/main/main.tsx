@@ -1,9 +1,10 @@
 // import Card from '../../components/card/card';
 import CardList from '../../components/card-list/card-list';
 import offers from '../../mocks/offers';
-  type MainProps = {
-    offersCount: number;
-  }
+
+type MainProps = {
+  offersCount: number;
+}
 
 function Main({offersCount = 0} : MainProps): JSX.Element {
   return (

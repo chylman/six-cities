@@ -9,4 +9,5 @@ export enum AppRoute {
   Login = '/login',
   Room = '/offer',
   Favourites = '/favourites',
+  Property = ''
 }
