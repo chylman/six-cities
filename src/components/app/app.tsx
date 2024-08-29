@@ -7,15 +7,17 @@ import PrivateRoute from '../private-route/private-route';
 import Favorites from '../../pages/favorites/favorites';
 import Room from '../../pages/room/room';
 
+import type { Offer } from '../../types/offer';
+
 type AppProps = {
-  offersCount: number;
+  offers: Offer[];
 }
 
-function App({offersCount}: AppProps) : JSX.Element {
+function App({offers}: AppProps) : JSX.Element {
   return (
     <BrowserRouter>
       <Routes>
-        <Route index path={AppRoute.Root} element={<Main offersCount={offersCount}/>}></Route>
+        <Route index path={AppRoute.Root} element={<Main offers={offers}/>}></Route>
         <Route path={AppRoute.Login} element={<Login/>}></Route>
         <Route path={AppRoute.Favourites} element={
           <PrivateRoute
