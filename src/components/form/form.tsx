@@ -40,7 +40,7 @@ function Form() {
           </Fragment>
         ))}
       </div>
-      <textarea className="reviews__textarea form__textarea" id="review" name="review"
+      <textarea className="reviews__textarea form__textarea" id="review" name="review" value={text}
         onChange={handleTextareaChange}
         placeholder="Tell how was your stay, what you like and what can be improved"
       >
